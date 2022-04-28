@@ -34,7 +34,7 @@ public class bankomat {
         switch (selection) {
             case 1:
                 System.out.println("Geben Sie den Betrag ein den Sie einzahlen möchten:");
-                int betrag = scanner.nextInt();
+                int betrag1 = scanner.nextInt();
                 einzahlung = betrag;
                 System.out.println(einzahlung + "Euro");
                 break;
