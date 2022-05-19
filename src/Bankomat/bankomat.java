@@ -9,11 +9,10 @@ public class bankomat {
 
 
     public static void main(String[] args) {
+            startPage();
+        }
 
-        int kontostand = 0;
-        int einzahlung = 0;
-        int auszahlung = 0;
-
+    public static void startPage(){
         System.out.println("Selektieren Sie die gewünschte Funktion");
         System.out.println("      " + "1." + "Einzahlen");
         System.out.println("      " + "2." + "Abheben");
@@ -24,33 +23,48 @@ public class bankomat {
         Scanner scanner = new Scanner(System.in);
         int selection = scanner.nextInt();
 
-        do {
-
+        while(selection > 4) {
             System.out.println("Wählen Sie eine Zahl zwischen 1 und 4 aus!");
             selection = scanner.nextInt();
-
-        } while (selection > 4);
+        }
 
         switch (selection) {
             case 1:
-                System.out.println("Geben Sie den Betrag ein den Sie einzahlen möchten:");
-                int betrag1 = scanner.nextInt();
-                einzahlung = betrag;
-                System.out.println(einzahlung + "Euro");
+                deposit();
                 break;
             case 2:
-                System.out.println("Geben Sie den Betrag ein den Sie abheben möchten:");
+                withdraw();
                 break;
             case 3:
-                System.out.println("kontostand");
+                balance();
                 break;
             case 4:
-                System.out.println("Aufwiedersehen");
+                end();
                 break;
         }
 
-        selection.nextInt();
+    }
+    public static void deposit(){
+        System.out.println("Geben Sie den Betrag ein den Sie einzahlen möchten:");
+
+        Scanner scanner = new Scanner(System.in);
+        float selection = scanner.nextFloat();
+
 
     }
 
+    public static void balance(){
+
+    }
+
+    public static void withdraw(){
+        System.out.println("Geben Sie den Betrag ein den Sie abheben möchten:");
+    }
+
+    public static void end(){
+        System.out.println("Aufwiedersehen!");
+    }
+
 }
+
+
